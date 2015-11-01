@@ -1,0 +1,578 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01B0B8F9247083CE3EA96F53D37A4A5D /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E62303E978AEC901B69A2B64B3D241 /* Connection.swift */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		07B845C239A66CC751143EC71EE4DC18 /* CustomFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8C50A58347BEC91591E9F3BD9309A4 /* CustomFunctions.swift */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		1514EDAA48655FBD19D4AE544B14F105 /* SQLite-Bridging.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A24BC30897A54C36AA9D1997F06AD7 /* SQLite-Bridging.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		191A50434F1C7D6A4651BE4FC4742707 /* Setter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9940C85D26F6831B6A8F05757CADF302 /* Setter.swift */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		20F1F09CBE8B41B987EE8B2B77C5518B /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76119FFBF3992247697A7496C23FCF54 /* Operators.swift */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		29A0AC37A7D6CD666BC2CDF66F600369 /* R*Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C7AB900F85E93990A17B1DAD18A4FB /* R*Tree.swift */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		3A52A4885595B6068DF3498614CFFD7A /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49629E7F403620D74A0867985E3EA365 /* Helpers.swift */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		3DD0522CCFFDA3CF132394304E3B3526 /* Collation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0A77DB0574F65C062C2CB064A559A3 /* Collation.swift */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		4327E87743F024F18ACD78B3B208C81D /* SQLite.swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 015434CAE0F7DD2FB1FC09FE04EE652F /* SQLite.swift-dummy.m */; };
+		57CC92CD0B4DE1947D82BDE64254D1B3 /* FTS4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7314E2EFD492A49E2FD198BBC467160E /* FTS4.swift */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		5B69F0803FCD686E574A52E7C36BD757 /* SQLite-Bridging.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C100B170897A6F0295A799F0BDE921B /* SQLite-Bridging.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		677470BCCFA89A110F96EAF7F2DE0E9E /* Pods-Mockstagram-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3660779A31EE6D918C3B4E64304384A4 /* Pods-Mockstagram-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6F2DF5824B7B8195CEC186EE6294D8A0 /* Blob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD0F0BE4A7B6BC0C5E77C853B4FD725 /* Blob.swift */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		6FB5E9E0ACE683F05DAD79D64EB7E2D3 /* AggregateFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FF6F72019004D15B30D292CED51E7C /* AggregateFunctions.swift */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		710BCBC09D869A6CED3DCEAE6392B1B5 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4BC405C0229B007401E4CCB7242D08 /* Query.swift */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		78A563565836AFC9E81D46ACF12E25B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		8810B82156D6C347C20585C61D471E74 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		A79E7EEBF766137B2A9EED11A1D2438C /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C01CC5FA8AD62D4A4FCA295A5F8BB8 /* Expression.swift */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		A86EAF7908BF33352C6151BC198B6D99 /* CoreFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162601DA845AEEA259DDAE1CBDC20BB1 /* CoreFunctions.swift */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		B5B2245830E2FA04E8318E0616406BBE /* Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAFF6CA2E85C5621CCE803A9B319F79 /* Foundation.swift */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		E38700BA9BE9565822009931D57FD6C0 /* Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E4F20BDB3F8CEADC73BDC1CB62E4EA /* Schema.swift */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		E9C678006ABDEBD80A342536E4CF3C52 /* Pods-Mockstagram-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DB541C3B827F434ACC15B2AC995473 /* Pods-Mockstagram-dummy.m */; };
+		EC63D64D8A7223B61566D6D3EF7ACA27 /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453C96F2987AE87A5161326C4E54C6BE /* Value.swift */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		EE416C6B563B4A81991C7F73124663E2 /* Statement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393F7D23ADD4F572E5F4B8D92D723B38 /* Statement.swift */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		FB73350FE4EAFA10037A6BC210D934C0 /* SQLite.h in Headers */ = {isa = PBXBuildFile; fileRef = 265C19D91EE4A8915D54C605393D1C56 /* SQLite.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FF7B65736EDDFF83F76BB36DBBD8BDE7 /* fts3_tokenizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 36BDD367B8D880352950B53F237AAFD2 /* fts3_tokenizer.h */; settings = {ATTRIBUTES = (Private, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8BEDF38053DB8CEA71CF0D36B243B66C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD671585FD28676E779986261A5EBB21;
+			remoteInfo = SQLite.swift;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0016CEB25A6CEE2DA4D4873042BC9EB5 /* SQLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SQLite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		015434CAE0F7DD2FB1FC09FE04EE652F /* SQLite.swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SQLite.swift-dummy.m"; sourceTree = "<group>"; };
+		162601DA845AEEA259DDAE1CBDC20BB1 /* CoreFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CoreFunctions.swift; path = Source/Typed/CoreFunctions.swift; sourceTree = "<group>"; };
+		1D0A77DB0574F65C062C2CB064A559A3 /* Collation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Collation.swift; path = Source/Typed/Collation.swift; sourceTree = "<group>"; };
+		217645A993829312A03A786134A29391 /* Pods-Mockstagram-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Mockstagram-frameworks.sh"; sourceTree = "<group>"; };
+		25EDDB9F5E6B961DC47490D997951DC5 /* Pods-Mockstagram-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Mockstagram-acknowledgements.markdown"; sourceTree = "<group>"; };
+		265C19D91EE4A8915D54C605393D1C56 /* SQLite.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SQLite.h; path = "Supporting Files/SQLite/SQLite.h"; sourceTree = "<group>"; };
+		317C550CB3778735A4C6C60020719CCB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3660779A31EE6D918C3B4E64304384A4 /* Pods-Mockstagram-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Mockstagram-umbrella.h"; sourceTree = "<group>"; };
+		36BDD367B8D880352950B53F237AAFD2 /* fts3_tokenizer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = fts3_tokenizer.h; path = Source/Core/fts3_tokenizer.h; sourceTree = "<group>"; };
+		393F7D23ADD4F572E5F4B8D92D723B38 /* Statement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Statement.swift; path = Source/Core/Statement.swift; sourceTree = "<group>"; };
+		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		453C96F2987AE87A5161326C4E54C6BE /* Value.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Value.swift; path = Source/Core/Value.swift; sourceTree = "<group>"; };
+		45AEB414F45B48E414715095CEFADF92 /* Pods-Mockstagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Mockstagram.debug.xcconfig"; sourceTree = "<group>"; };
+		4760EC1CAEC9B83E987BE0E2B0970EB9 /* Pods_Mockstagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mockstagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		49629E7F403620D74A0867985E3EA365 /* Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Helpers.swift; path = Source/Helpers.swift; sourceTree = "<group>"; };
+		59FF6F72019004D15B30D292CED51E7C /* AggregateFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AggregateFunctions.swift; path = Source/Typed/AggregateFunctions.swift; sourceTree = "<group>"; };
+		5FD0F0BE4A7B6BC0C5E77C853B4FD725 /* Blob.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Blob.swift; path = Source/Core/Blob.swift; sourceTree = "<group>"; };
+		65DB541C3B827F434ACC15B2AC995473 /* Pods-Mockstagram-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Mockstagram-dummy.m"; sourceTree = "<group>"; };
+		6C100B170897A6F0295A799F0BDE921B /* SQLite-Bridging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SQLite-Bridging.h"; path = "Source/Core/SQLite-Bridging.h"; sourceTree = "<group>"; };
+		6C8C50A58347BEC91591E9F3BD9309A4 /* CustomFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomFunctions.swift; path = Source/Typed/CustomFunctions.swift; sourceTree = "<group>"; };
+		7314E2EFD492A49E2FD198BBC467160E /* FTS4.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FTS4.swift; path = Source/Extensions/FTS4.swift; sourceTree = "<group>"; };
+		73C01CC5FA8AD62D4A4FCA295A5F8BB8 /* Expression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Expression.swift; path = Source/Typed/Expression.swift; sourceTree = "<group>"; };
+		754D605EDD838BEC6985FEB3053129C8 /* Pods-Mockstagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Mockstagram.release.xcconfig"; sourceTree = "<group>"; };
+		75E4F20BDB3F8CEADC73BDC1CB62E4EA /* Schema.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Schema.swift; path = Source/Typed/Schema.swift; sourceTree = "<group>"; };
+		76119FFBF3992247697A7496C23FCF54 /* Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = Source/Typed/Operators.swift; sourceTree = "<group>"; };
+		79C7AB900F85E93990A17B1DAD18A4FB /* R*Tree.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "R*Tree.swift"; path = "Source/Extensions/R*Tree.swift"; sourceTree = "<group>"; };
+		8D4BC405C0229B007401E4CCB7242D08 /* Query.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Query.swift; path = Source/Typed/Query.swift; sourceTree = "<group>"; };
+		97A24BC30897A54C36AA9D1997F06AD7 /* SQLite-Bridging.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SQLite-Bridging.m"; path = "Source/Core/SQLite-Bridging.m"; sourceTree = "<group>"; };
+		97CE7172278C455ADE614A2DCB56D4C8 /* SQLite.swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SQLite.swift.xcconfig; sourceTree = "<group>"; };
+		9940C85D26F6831B6A8F05757CADF302 /* Setter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Setter.swift; path = Source/Typed/Setter.swift; sourceTree = "<group>"; };
+		9D30561B8082BACD115A0A61D11C7D5A /* Pods-Mockstagram-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Mockstagram-resources.sh"; sourceTree = "<group>"; };
+		ABC3586399BC8628DB500E010ECD7897 /* SQLite.swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SQLite.swift-prefix.pch"; sourceTree = "<group>"; };
+		B803BE92DEA17EF862E3E92B0353D971 /* Pods-Mockstagram.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Mockstagram.modulemap"; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C31DA2B6EC4F2E62E9F58DFF0D0E6D1A /* SQLite.swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SQLite.swift.modulemap; sourceTree = "<group>"; };
+		C5E62303E978AEC901B69A2B64B3D241 /* Connection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Connection.swift; path = Source/Core/Connection.swift; sourceTree = "<group>"; };
+		DAAFF6CA2E85C5621CCE803A9B319F79 /* Foundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Foundation.swift; path = Source/Foundation.swift; sourceTree = "<group>"; };
+		E655763D97A625E1D10768D772E882DE /* Pods-Mockstagram-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Mockstagram-acknowledgements.plist"; sourceTree = "<group>"; };
+		FB2D414FC812726DA373CA87510E5E45 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0426C3BB70BC0EEC0463C0AC5CB0F1C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78A563565836AFC9E81D46ACF12E25B4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19DBB8793CAA6BFF858DC7002860EC1E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8810B82156D6C347C20585C61D471E74 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0BD3F5BE54C3BE91326B3F889C4F1C0A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4760EC1CAEC9B83E987BE0E2B0970EB9 /* Pods_Mockstagram.framework */,
+				0016CEB25A6CEE2DA4D4873042BC9EB5 /* SQLite.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3ADEF9E85BA526143EA7224C28E3BEE3 /* SQLite.swift */ = {
+			isa = PBXGroup;
+			children = (
+				59FF6F72019004D15B30D292CED51E7C /* AggregateFunctions.swift */,
+				5FD0F0BE4A7B6BC0C5E77C853B4FD725 /* Blob.swift */,
+				1D0A77DB0574F65C062C2CB064A559A3 /* Collation.swift */,
+				C5E62303E978AEC901B69A2B64B3D241 /* Connection.swift */,
+				162601DA845AEEA259DDAE1CBDC20BB1 /* CoreFunctions.swift */,
+				6C8C50A58347BEC91591E9F3BD9309A4 /* CustomFunctions.swift */,
+				73C01CC5FA8AD62D4A4FCA295A5F8BB8 /* Expression.swift */,
+				DAAFF6CA2E85C5621CCE803A9B319F79 /* Foundation.swift */,
+				36BDD367B8D880352950B53F237AAFD2 /* fts3_tokenizer.h */,
+				7314E2EFD492A49E2FD198BBC467160E /* FTS4.swift */,
+				49629E7F403620D74A0867985E3EA365 /* Helpers.swift */,
+				76119FFBF3992247697A7496C23FCF54 /* Operators.swift */,
+				8D4BC405C0229B007401E4CCB7242D08 /* Query.swift */,
+				79C7AB900F85E93990A17B1DAD18A4FB /* R*Tree.swift */,
+				75E4F20BDB3F8CEADC73BDC1CB62E4EA /* Schema.swift */,
+				9940C85D26F6831B6A8F05757CADF302 /* Setter.swift */,
+				265C19D91EE4A8915D54C605393D1C56 /* SQLite.h */,
+				6C100B170897A6F0295A799F0BDE921B /* SQLite-Bridging.h */,
+				97A24BC30897A54C36AA9D1997F06AD7 /* SQLite-Bridging.m */,
+				393F7D23ADD4F572E5F4B8D92D723B38 /* Statement.swift */,
+				453C96F2987AE87A5161326C4E54C6BE /* Value.swift */,
+				F552D6BF70E91AD4C850CDECF0156B71 /* Support Files */,
+			);
+			path = SQLite.swift;
+			sourceTree = "<group>";
+		};
+		55EC1D21DBE2EBBA621774D9A2A5A684 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3ADEF9E85BA526143EA7224C28E3BEE3 /* SQLite.swift */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		64FC40DB83B326B488364AD85B10CF80 /* Pods-Mockstagram */ = {
+			isa = PBXGroup;
+			children = (
+				317C550CB3778735A4C6C60020719CCB /* Info.plist */,
+				B803BE92DEA17EF862E3E92B0353D971 /* Pods-Mockstagram.modulemap */,
+				25EDDB9F5E6B961DC47490D997951DC5 /* Pods-Mockstagram-acknowledgements.markdown */,
+				E655763D97A625E1D10768D772E882DE /* Pods-Mockstagram-acknowledgements.plist */,
+				65DB541C3B827F434ACC15B2AC995473 /* Pods-Mockstagram-dummy.m */,
+				217645A993829312A03A786134A29391 /* Pods-Mockstagram-frameworks.sh */,
+				9D30561B8082BACD115A0A61D11C7D5A /* Pods-Mockstagram-resources.sh */,
+				3660779A31EE6D918C3B4E64304384A4 /* Pods-Mockstagram-umbrella.h */,
+				45AEB414F45B48E414715095CEFADF92 /* Pods-Mockstagram.debug.xcconfig */,
+				754D605EDD838BEC6985FEB3053129C8 /* Pods-Mockstagram.release.xcconfig */,
+			);
+			name = "Pods-Mockstagram";
+			path = "Target Support Files/Pods-Mockstagram";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				55EC1D21DBE2EBBA621774D9A2A5A684 /* Pods */,
+				0BD3F5BE54C3BE91326B3F889C4F1C0A /* Products */,
+				CB4755C9AF04F3249E2C4C7F9F50F26C /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CB4755C9AF04F3249E2C4C7F9F50F26C /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				64FC40DB83B326B488364AD85B10CF80 /* Pods-Mockstagram */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		F552D6BF70E91AD4C850CDECF0156B71 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FB2D414FC812726DA373CA87510E5E45 /* Info.plist */,
+				C31DA2B6EC4F2E62E9F58DFF0D0E6D1A /* SQLite.swift.modulemap */,
+				97CE7172278C455ADE614A2DCB56D4C8 /* SQLite.swift.xcconfig */,
+				015434CAE0F7DD2FB1FC09FE04EE652F /* SQLite.swift-dummy.m */,
+				ABC3586399BC8628DB500E010ECD7897 /* SQLite.swift-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SQLite.swift";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		6A68A59ECB8A180BF31A19FBF0699CE4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				677470BCCFA89A110F96EAF7F2DE0E9E /* Pods-Mockstagram-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8848621CFCADB444487CE3153E63D486 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF7B65736EDDFF83F76BB36DBBD8BDE7 /* fts3_tokenizer.h in Headers */,
+				5B69F0803FCD686E574A52E7C36BD757 /* SQLite-Bridging.h in Headers */,
+				FB73350FE4EAFA10037A6BC210D934C0 /* SQLite.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		AD671585FD28676E779986261A5EBB21 /* SQLite.swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D08770F0E4338B0E8D4C0EE55601F5EF /* Build configuration list for PBXNativeTarget "SQLite.swift" */;
+			buildPhases = (
+				085826FCFE088BE3A3DEE95E809A0187 /* Sources */,
+				0426C3BB70BC0EEC0463C0AC5CB0F1C8 /* Frameworks */,
+				8848621CFCADB444487CE3153E63D486 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SQLite.swift;
+			productName = SQLite.swift;
+			productReference = 0016CEB25A6CEE2DA4D4873042BC9EB5 /* SQLite.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B3F47BFADDBBB7E4FC66F3E89FCE2916 /* Pods-Mockstagram */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 522F229BEBCCF438A2EEA5B5797A9B06 /* Build configuration list for PBXNativeTarget "Pods-Mockstagram" */;
+			buildPhases = (
+				25FD34E42F29A9EC564C322331F36BA6 /* Sources */,
+				19DBB8793CAA6BFF858DC7002860EC1E /* Frameworks */,
+				6A68A59ECB8A180BF31A19FBF0699CE4 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8EA28FB7C697F44854310A07E87FCB48 /* PBXTargetDependency */,
+			);
+			name = "Pods-Mockstagram";
+			productName = "Pods-Mockstagram";
+			productReference = 4760EC1CAEC9B83E987BE0E2B0970EB9 /* Pods_Mockstagram.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 0BD3F5BE54C3BE91326B3F889C4F1C0A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B3F47BFADDBBB7E4FC66F3E89FCE2916 /* Pods-Mockstagram */,
+				AD671585FD28676E779986261A5EBB21 /* SQLite.swift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		085826FCFE088BE3A3DEE95E809A0187 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FB5E9E0ACE683F05DAD79D64EB7E2D3 /* AggregateFunctions.swift in Sources */,
+				6F2DF5824B7B8195CEC186EE6294D8A0 /* Blob.swift in Sources */,
+				3DD0522CCFFDA3CF132394304E3B3526 /* Collation.swift in Sources */,
+				01B0B8F9247083CE3EA96F53D37A4A5D /* Connection.swift in Sources */,
+				A86EAF7908BF33352C6151BC198B6D99 /* CoreFunctions.swift in Sources */,
+				07B845C239A66CC751143EC71EE4DC18 /* CustomFunctions.swift in Sources */,
+				A79E7EEBF766137B2A9EED11A1D2438C /* Expression.swift in Sources */,
+				B5B2245830E2FA04E8318E0616406BBE /* Foundation.swift in Sources */,
+				57CC92CD0B4DE1947D82BDE64254D1B3 /* FTS4.swift in Sources */,
+				3A52A4885595B6068DF3498614CFFD7A /* Helpers.swift in Sources */,
+				20F1F09CBE8B41B987EE8B2B77C5518B /* Operators.swift in Sources */,
+				710BCBC09D869A6CED3DCEAE6392B1B5 /* Query.swift in Sources */,
+				29A0AC37A7D6CD666BC2CDF66F600369 /* R*Tree.swift in Sources */,
+				E38700BA9BE9565822009931D57FD6C0 /* Schema.swift in Sources */,
+				191A50434F1C7D6A4651BE4FC4742707 /* Setter.swift in Sources */,
+				1514EDAA48655FBD19D4AE544B14F105 /* SQLite-Bridging.m in Sources */,
+				4327E87743F024F18ACD78B3B208C81D /* SQLite.swift-dummy.m in Sources */,
+				EE416C6B563B4A81991C7F73124663E2 /* Statement.swift in Sources */,
+				EC63D64D8A7223B61566D6D3EF7ACA27 /* Value.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25FD34E42F29A9EC564C322331F36BA6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9C678006ABDEBD80A342536E4CF3C52 /* Pods-Mockstagram-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8EA28FB7C697F44854310A07E87FCB48 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SQLite.swift;
+			target = AD671585FD28676E779986261A5EBB21 /* SQLite.swift */;
+			targetProxy = 8BEDF38053DB8CEA71CF0D36B243B66C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		11880BDD2FABF8F8A8A652ABE7AD1531 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 754D605EDD838BEC6985FEB3053129C8 /* Pods-Mockstagram.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Mockstagram/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Mockstagram/Pods-Mockstagram.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_Mockstagram;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5CE5176205D06FF3FFE3DDDA9291E44B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		74857149DC1E0D599B8A01A78349A926 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7C804809343E107D403510F54AA561CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45AEB414F45B48E414715095CEFADF92 /* Pods-Mockstagram.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Mockstagram/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Mockstagram/Pods-Mockstagram.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_Mockstagram;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DBF34EA4773C0CD17BF2E478A1C0C70E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97CE7172278C455ADE614A2DCB56D4C8 /* SQLite.swift.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SQLite.swift/SQLite.swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SQLite.swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SQLite.swift/SQLite.swift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SQLite;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DCC38928D9D9008B3A216BF8BB4EC395 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97CE7172278C455ADE614A2DCB56D4C8 /* SQLite.swift.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SQLite.swift/SQLite.swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SQLite.swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SQLite.swift/SQLite.swift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SQLite;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CE5176205D06FF3FFE3DDDA9291E44B /* Debug */,
+				74857149DC1E0D599B8A01A78349A926 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		522F229BEBCCF438A2EEA5B5797A9B06 /* Build configuration list for PBXNativeTarget "Pods-Mockstagram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7C804809343E107D403510F54AA561CD /* Debug */,
+				11880BDD2FABF8F8A8A652ABE7AD1531 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D08770F0E4338B0E8D4C0EE55601F5EF /* Build configuration list for PBXNativeTarget "SQLite.swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBF34EA4773C0CD17BF2E478A1C0C70E /* Debug */,
+				DCC38928D9D9008B3A216BF8BB4EC395 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
