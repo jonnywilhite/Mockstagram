@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "8D18394B2EC7873BAFA08CE07F08788B67C35552",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "8D18394B2EC7873BAFA08CE07F08788B67C35552" : 0,
+    "3B818819C75D5A01DD19FAB10B5B9998D1C287D0" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "6DB0E78A-F527-46A9-BB9F-114AD23CC049",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "8D18394B2EC7873BAFA08CE07F08788B67C35552" : "Mockstagram\/",
+    "3B818819C75D5A01DD19FAB10B5B9998D1C287D0" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Mockstagram",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Mockstagram.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/jonnywilhite\/AppAttempt1.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3B818819C75D5A01DD19FAB10B5B9998D1C287D0"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/jonnywilhite\/Mockstagram.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8D18394B2EC7873BAFA08CE07F08788B67C35552"
+    }
+  ]
+}
