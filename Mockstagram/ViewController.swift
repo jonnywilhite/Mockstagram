@@ -17,9 +17,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         establishConnection()
-        createTable(db)
-        insertData()
-        performQuery()
+        //createTable(db)
+        //insertData()
+        //performQuery()
+        performComplexQuery()
     }
     
     override func didReceiveMemoryWarning() {
@@ -82,7 +83,7 @@ class ViewController: UIViewController {
         let age = Expression<Int64>("age")
         do {
             if let db = db {
-                let rowID = try db.run(sample.insert(name <- "John Doe", age <- 26))
+                let rowID = try db.run(sample.insert(name <- "John Doe", age <- 32))
                 print("Inserted ID: \(rowID)")
             }
         } catch _ {
@@ -101,6 +102,21 @@ class ViewController: UIViewController {
             for person in db.prepare(sample) {
                 print("Name: \(person[name])")
                 print("Age: \(person[age])")
+            }
+        }
+    }
+    
+    func performComplexQuery() {
+        print("Generating query...")
+        let sample = Table("sample")
+        let name = Expression<String>("name")
+        let age = Expression<Int64>("age")
+        
+        let query = sample.select(name, age).filter(age < 31).order(age.desc)
+        
+        if let db = db {
+            for person in db.prepare(query) {
+                print("Name: \(person[name]), Age: \(person[age])")
             }
         }
     }
