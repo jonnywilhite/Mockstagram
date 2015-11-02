@@ -11,11 +11,24 @@ import SQLite
 
 class ViewController: UIViewController {
     
+    var db: Connection?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var db: Connection?
-        var itWorked = false
+        establishConnection()
+        createTable(db)
+        insertData()
+        performQuery()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    //MARK: SQL Stuff
+    func establishConnection() {
         
         let path = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first!
         
@@ -28,7 +41,10 @@ class ViewController: UIViewController {
         } catch _ {
             print("Unable to connect to database")
         }
-        
+    }
+    
+    func createTable(db: Connection?) {
+        var itWorked = false
         let sample = Table("sample")
         let name = Expression<String>("name")
         let age = Expression<Int64>("age")
@@ -39,7 +55,7 @@ class ViewController: UIViewController {
                 
                 //try db.run(sample.drop())
                 
-                try db.run(sample.create { t in
+                try db.run(sample.create(ifNotExists: true) { t in
                     t.column(name)
                     t.column(age)
                     
@@ -57,12 +73,36 @@ class ViewController: UIViewController {
         if itWorked {
             print("Table created")
         }
-        
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func insertData() {
+        print("Inserting data...")
+        let sample = Table("sample")
+        let name = Expression<String>("name")
+        let age = Expression<Int64>("age")
+        do {
+            if let db = db {
+                let rowID = try db.run(sample.insert(name <- "John Doe", age <- 26))
+                print("Inserted ID: \(rowID)")
+            }
+        } catch _ {
+            print("Could not insert data")
+        }
+    }
+    
+    func performQuery() {
+        print("Generating query...")
+        let sample = Table("sample")
+        let name = Expression<String>("name")
+        let age = Expression<Int64>("age")
+        
+        
+        if let db = db {
+            for person in db.prepare(sample) {
+                print("Name: \(person[name])")
+                print("Age: \(person[age])")
+            }
+        }
     }
     
     
