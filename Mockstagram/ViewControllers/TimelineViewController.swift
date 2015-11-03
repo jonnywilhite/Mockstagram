@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  TimelineViewController.swift
 //  Mockstagram
 //
 //  Created by Jonathan Wilhite on 10/31/15.
@@ -9,17 +9,17 @@
 import UIKit
 import SQLite
 
-class ViewController: UIViewController {
+class TimelineViewController: UIViewController {
     
     var db: Connection?
     
-    @IBOutlet weak var imageView : UIImageView!
+    //@IBOutlet weak var imageView : UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         establishConnection()
-        logIn()
+        //logIn()
         //createTable(db)
         //insertData()
         //performQuery()
@@ -197,24 +197,24 @@ class ViewController: UIViewController {
         }
     }
     
-    func displayImage() {
-        let image = Table("image")
-        let url = Expression<String>("url")
-        var imageURLString : String?
-        
-        if let db = db {
-            for pic in db.prepare(image) {
-                imageURLString = pic[url]
-            }
-        }
-        
-        if let imageURLString = imageURLString {
-            let imageURL = NSURL(string: imageURLString)
-            let imageData = NSData(contentsOfURL: imageURL!)
-            let image = UIImage(data: imageData!)
-            imageView.image = image!
-        }
-    }
+//    func displayImage() {
+//        let image = Table("image")
+//        let url = Expression<String>("url")
+//        var imageURLString : String?
+//        
+//        if let db = db {
+//            for pic in db.prepare(image) {
+//                imageURLString = pic[url]
+//            }
+//        }
+//        
+//        if let imageURLString = imageURLString {
+//            let imageURL = NSURL(string: imageURLString)
+//            let imageData = NSData(contentsOfURL: imageURL!)
+//            let image = UIImage(data: imageData!)
+//            imageView.image = image!
+//        }
+//    }
     
 }
 
