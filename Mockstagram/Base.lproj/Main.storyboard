@@ -7,7 +7,7 @@
         <!--Friend Search View Controller-->
         <scene sceneID="z1C-kt-w6x">
             <objects>
-                <viewController title="Friend Search View Controller" id="L84-cu-i9e" sceneMemberID="viewController">
+                <viewController title="Friend Search View Controller" id="L84-cu-i9e" customClass="FriendSearchViewController" customModule="Mockstagram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CJf-Qi-4MQ"/>
                         <viewControllerLayoutGuide type="bottom" id="QWR-tm-dzX"/>
@@ -42,7 +42,7 @@
         <!--Photo View Controller-->
         <scene sceneID="L98-Lh-QkJ">
             <objects>
-                <viewController title="Photo View Controller" id="X5S-v1-xBh" sceneMemberID="viewController">
+                <viewController title="Photo View Controller" id="X5S-v1-xBh" customClass="PhotoViewController" customModule="Mockstagram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tPw-eo-Tk4"/>
                         <viewControllerLayoutGuide type="bottom" id="pPH-9m-YWS"/>

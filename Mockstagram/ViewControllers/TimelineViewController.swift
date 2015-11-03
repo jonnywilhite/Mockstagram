@@ -17,7 +17,7 @@ class TimelineViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.tabBarController?.delegate = self
         establishConnection()
         //logIn()
         //createTable(db)
@@ -216,5 +216,16 @@ class TimelineViewController: UIViewController {
 //        }
 //    }
     
+}
+
+extension TimelineViewController: UITabBarControllerDelegate {
+    
+    func tabBarController(tabBarController: UITabBarController, shouldSelectViewController viewController: UIViewController) -> Bool {
+        if (viewController is PhotoViewController) {
+            return false
+        } else {
+            return true
+        }
+    }
 }
 
