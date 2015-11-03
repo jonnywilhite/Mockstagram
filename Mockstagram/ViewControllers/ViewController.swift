@@ -19,8 +19,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         establishConnection()
+        logIn()
         //createTable(db)
-        createAnotherTable(db)
         //insertData()
         //performQuery()
         //performComplexQuery()
@@ -38,11 +38,9 @@ class ViewController: UIViewController {
     //MARK: SQL Stuff
     func establishConnection() {
         
-        let path = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first!
-        
         print("Connecting to database...")
         do {
-            db = try Connection("\(path)/db.sqlite3")
+            db = try Connection("/users/jonathanwilhite/Desktop/Mockstagram.db")
             if db != nil {
                 print("Database connected")
             }
@@ -51,42 +49,35 @@ class ViewController: UIViewController {
         }
     }
     
+    func logIn() {
+        let testUser = "jonny"
+        let testPass = "test"
+        
+        let user = Table("user")
+        let username = Expression<String>("username")
+        let password = Expression<String>("password")
+        
+        let query = user.select(username, password).filter(username == testUser && password == testPass).limit(1)
+        var i = 0
+        if let db = db {
+            for person in db.prepare(query) {
+                print("Logging in as \(person[username])")
+                i++
+            }
+        }
+        if i == 1 {
+            print("Logged in successfully")
+        } else {
+            print("Login failed")
+        }
+    }
+    
     func createTable(db: Connection?) {
-//        var itWorked = false
-//        let sample = Table("sample")
-//        let name = Expression<String>("name")
-//        let age = Expression<Int64>("age")
-//        let id = Expression<Int64>("id")
-//        
-//        print("Creating table...")
-//        do {
-//            if let db = db {
-//                
-//                //try db.run(sample.drop())
-//                
-//                try db.run(sample.create(ifNotExists: true) { t in
-//                    t.column(name)
-//                    t.column(age)
-//                    t.column(id)
-//                    
-//                    itWorked = true;
-//                    })
-//            } else {
-//                print("Didn't work")
-//                itWorked = false
-//            }
-//        } catch _ {
-//            print("Unable to create table")
-//            itWorked = false;
-//        }
-//        
-//        if itWorked {
-//            print("Table created")
-//        }
         
         var itWorked = false
-        let image = Table("image")
-        let url = Expression<String>("url")
+        let flag = Table("flag")
+        let fromUser = Expression<String>("fromUser")
+        let toPost = Expression<Int64>("toPost")
         
         print("Creating table...")
         do {
@@ -94,38 +85,9 @@ class ViewController: UIViewController {
                 
                 //try db.run(sample.drop())
                 
-                try db.run(image.create(ifNotExists: true) { t in
-                    t.column(url)
-                    
-                    itWorked = true;
-                    })
-            } else {
-                print("Didn't work")
-                itWorked = false
-            }
-        } catch _ {
-            print("Unable to create table")
-            itWorked = false;
-        }
-        
-        if itWorked {
-            print("Table created")
-        }
-    }
-    
-    func createAnotherTable(db: Connection?) {
-        var itWorked = false
-        let image = Table("image")
-        let imageData = Expression<SQLite.Blob>("imageData")
-        
-        print("Creating table...")
-        do {
-            if let db = db {
-                
-                //try db.run(image.drop())
-                
-                try db.run(image.create(ifNotExists: true) { t in
-                    t.column(imageData)
+                try db.run(flag.create(ifNotExists: true) { t in
+                    t.column(fromUser)
+                    t.column(toPost)
                     
                     itWorked = true;
                     })

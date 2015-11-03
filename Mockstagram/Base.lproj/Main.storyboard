@@ -31,12 +31,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="imageView" destination="VSR-Iw-aoH" id="pGT-iS-L4f"/>
+                        <outlet property="imageView" destination="VSR-Iw-aoH" id="GYn-PE-ekg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="245" y="272"/>
+            <point key="canvasLocation" x="609" y="250"/>
         </scene>
     </scenes>
 </document>

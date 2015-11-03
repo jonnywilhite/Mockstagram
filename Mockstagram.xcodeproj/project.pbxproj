@@ -8,9 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		30529247F7949697B3C4C2D8 /* Pods_Mockstagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 215E5518028239E6206F56B0 /* Pods_Mockstagram.framework */; };
-		B4A4CE7C1BE6F8E70055EDD9 /* Ships.sql in Resources */ = {isa = PBXBuildFile; fileRef = B4A4CE7B1BE6F8E70055EDD9 /* Ships.sql */; settings = {ASSET_TAGS = (); }; };
+		B4BABFC01BE93F0E00CE1A1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BABFBF1BE93F0E00CE1A1A /* ViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		B4E3B9651BE58C3A00D7D7FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E3B9641BE58C3A00D7D7FA /* AppDelegate.swift */; };
-		B4E3B9671BE58C3A00D7D7FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E3B9661BE58C3A00D7D7FA /* ViewController.swift */; };
 		B4E3B96A1BE58C3A00D7D7FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4E3B9681BE58C3A00D7D7FA /* Main.storyboard */; };
 		B4E3B96C1BE58C3A00D7D7FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4E3B96B1BE58C3A00D7D7FA /* Assets.xcassets */; };
 		B4E3B96F1BE58C3A00D7D7FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4E3B96D1BE58C3A00D7D7FA /* LaunchScreen.storyboard */; };
@@ -39,10 +38,9 @@
 		1C216D5580EF0C1CAC96ABA3 /* Pods-Mockstagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mockstagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mockstagram/Pods-Mockstagram.release.xcconfig"; sourceTree = "<group>"; };
 		215E5518028239E6206F56B0 /* Pods_Mockstagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mockstagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		35A7C077C857DC4CBEF64C5F /* Pods-Mockstagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mockstagram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mockstagram/Pods-Mockstagram.debug.xcconfig"; sourceTree = "<group>"; };
-		B4A4CE7B1BE6F8E70055EDD9 /* Ships.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Ships.sql; sourceTree = "<group>"; };
+		B4BABFBF1BE93F0E00CE1A1A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B4E3B9611BE58C3A00D7D7FA /* Mockstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mockstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4E3B9641BE58C3A00D7D7FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B4E3B9661BE58C3A00D7D7FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B4E3B9691BE58C3A00D7D7FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B4E3B96B1BE58C3A00D7D7FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4E3B96E1BE58C3A00D7D7FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,6 +96,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B4BABFBE1BE93F0E00CE1A1A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B4BABFBF1BE93F0E00CE1A1A /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		B4E3B9581BE58C3900D7D7FA = {
 			isa = PBXGroup;
 			children = (
@@ -123,9 +129,8 @@
 		B4E3B9631BE58C3A00D7D7FA /* Mockstagram */ = {
 			isa = PBXGroup;
 			children = (
-				B4A4CE7B1BE6F8E70055EDD9 /* Ships.sql */,
+				B4BABFBE1BE93F0E00CE1A1A /* ViewControllers */,
 				B4E3B9641BE58C3A00D7D7FA /* AppDelegate.swift */,
-				B4E3B9661BE58C3A00D7D7FA /* ViewController.swift */,
 				B4E3B9681BE58C3A00D7D7FA /* Main.storyboard */,
 				B4E3B96B1BE58C3A00D7D7FA /* Assets.xcassets */,
 				B4E3B96D1BE58C3A00D7D7FA /* LaunchScreen.storyboard */,
@@ -260,7 +265,6 @@
 			files = (
 				B4E3B96F1BE58C3A00D7D7FA /* LaunchScreen.storyboard in Resources */,
 				B4E3B96C1BE58C3A00D7D7FA /* Assets.xcassets in Resources */,
-				B4A4CE7C1BE6F8E70055EDD9 /* Ships.sql in Resources */,
 				B4E3B96A1BE58C3A00D7D7FA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,7 +338,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4E3B9671BE58C3A00D7D7FA /* ViewController.swift in Sources */,
+				B4BABFC01BE93F0E00CE1A1A /* ViewController.swift in Sources */,
 				B4E3B9651BE58C3A00D7D7FA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
