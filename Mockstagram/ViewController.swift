@@ -13,17 +13,21 @@ class ViewController: UIViewController {
     
     var db: Connection?
     
+    @IBOutlet weak var imageView : UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         establishConnection()
         //createTable(db)
-        //createAnotherTable(db)
+        createAnotherTable(db)
         //insertData()
         //performQuery()
         //performComplexQuery()
         //performJoinQuery()
-        performAggregateQuery()
+        //performAggregateQuery()
+        //displayImage()
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -48,11 +52,41 @@ class ViewController: UIViewController {
     }
     
     func createTable(db: Connection?) {
+//        var itWorked = false
+//        let sample = Table("sample")
+//        let name = Expression<String>("name")
+//        let age = Expression<Int64>("age")
+//        let id = Expression<Int64>("id")
+//        
+//        print("Creating table...")
+//        do {
+//            if let db = db {
+//                
+//                //try db.run(sample.drop())
+//                
+//                try db.run(sample.create(ifNotExists: true) { t in
+//                    t.column(name)
+//                    t.column(age)
+//                    t.column(id)
+//                    
+//                    itWorked = true;
+//                    })
+//            } else {
+//                print("Didn't work")
+//                itWorked = false
+//            }
+//        } catch _ {
+//            print("Unable to create table")
+//            itWorked = false;
+//        }
+//        
+//        if itWorked {
+//            print("Table created")
+//        }
+        
         var itWorked = false
-        let sample = Table("sample")
-        let name = Expression<String>("name")
-        let age = Expression<Int64>("age")
-        let id = Expression<Int64>("id")
+        let image = Table("image")
+        let url = Expression<String>("url")
         
         print("Creating table...")
         do {
@@ -60,10 +94,8 @@ class ViewController: UIViewController {
                 
                 //try db.run(sample.drop())
                 
-                try db.run(sample.create(ifNotExists: true) { t in
-                    t.column(name)
-                    t.column(age)
-                    t.column(id)
+                try db.run(image.create(ifNotExists: true) { t in
+                    t.column(url)
                     
                     itWorked = true;
                     })
@@ -83,19 +115,17 @@ class ViewController: UIViewController {
     
     func createAnotherTable(db: Connection?) {
         var itWorked = false
-        let product = Table("product")
-        let device = Expression<String>("device")
-        let ownerID = Expression<Int64>("ownerID")
+        let image = Table("image")
+        let imageData = Expression<SQLite.Blob>("imageData")
         
         print("Creating table...")
         do {
             if let db = db {
                 
-                //try db.run(sample.drop())
+                //try db.run(image.drop())
                 
-                try db.run(product.create(ifNotExists: true) { t in
-                    t.column(device)
-                    t.column(ownerID)
+                try db.run(image.create(ifNotExists: true) { t in
+                    t.column(imageData)
                     
                     itWorked = true;
                     })
@@ -129,12 +159,12 @@ class ViewController: UIViewController {
 //        }
         
         print("Inserting data...")
-        let product = Table("product")
-        let device = Expression<String>("device")
-        let ownerID = Expression<Int64>("ownerID")
+        let image = Table("image")
+        let url = Expression<String>("url")
+        let imageURL = "http://i.imgur.com/PxYPizA.png"
         do {
             if let db = db {
-                let rowID = try db.run(product.insert(device <- "iPhone", ownerID <- 001))
+                let rowID = try db.run(image.insert(url <- imageURL))
                 print("Inserted ID: \(rowID)")
             }
         } catch _ {
@@ -202,6 +232,25 @@ class ViewController: UIViewController {
         if let db = db {
             let count = db.scalar(sample.count)
             print(count)
+        }
+    }
+    
+    func displayImage() {
+        let image = Table("image")
+        let url = Expression<String>("url")
+        var imageURLString : String?
+        
+        if let db = db {
+            for pic in db.prepare(image) {
+                imageURLString = pic[url]
+            }
+        }
+        
+        if let imageURLString = imageURLString {
+            let imageURL = NSURL(string: imageURLString)
+            let imageData = NSData(contentsOfURL: imageURL!)
+            let image = UIImage(data: imageData!)
+            imageView.image = image!
         }
     }
     
