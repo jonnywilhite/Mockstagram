@@ -15,12 +15,31 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+<<<<<<< HEAD
+=======
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VSR-Iw-aoH">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                            </imageView>
+                        </subviews>
+>>>>>>> dev
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VSR-Iw-aoH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Hn2-xG-X4m"/>
+                            <constraint firstAttribute="trailing" secondItem="VSR-Iw-aoH" secondAttribute="trailing" id="VdR-Qh-SeO"/>
+                            <constraint firstItem="VSR-Iw-aoH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="jUe-ZJ-Mxk"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VSR-Iw-aoH" secondAttribute="bottom" id="xiv-hE-HyN"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="VSR-Iw-aoH" id="GYn-PE-ekg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="609" y="250"/>
         </scene>
     </scenes>
 </document>
