@@ -15,10 +15,25 @@
                     <view key="view" contentMode="scaleToFill" id="NJQ-XQ-HbC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Friend Search Stuff" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CSA-mz-R6l">
+                                <rect key="frame" x="214" y="84" width="172" height="24"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CSA-mz-R6l" firstAttribute="centerX" secondItem="NJQ-XQ-HbC" secondAttribute="centerX" id="ELN-7D-eu6"/>
+                            <constraint firstItem="CSA-mz-R6l" firstAttribute="top" secondItem="CJf-Qi-4MQ" secondAttribute="bottom" constant="64" id="KJ3-dx-vQb"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="maW-fN-41q"/>
+                    <tabBarItem key="tabBarItem" title="" image="People" id="maW-fN-41q">
+                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PAa-o0-jU8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -35,10 +50,25 @@
                     <view key="view" contentMode="scaleToFill" id="PkI-6k-Hkk">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t3r-EP-oTI">
+                                <rect key="frame" x="237" y="84" width="127" height="24"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="t3r-EP-oTI" firstAttribute="top" secondItem="tPw-eo-Tk4" secondAttribute="bottom" constant="64" id="CrD-F3-Tq2"/>
+                            <constraint firstItem="t3r-EP-oTI" firstAttribute="centerX" secondItem="PkI-6k-Hkk" secondAttribute="centerX" id="kHK-k6-QIK"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="3ZY-oW-rTA"/>
+                    <tabBarItem key="tabBarItem" title="" image="Camera" id="3ZY-oW-rTA">
+                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="94q-BE-HUv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -55,10 +85,25 @@
                     <view key="view" contentMode="scaleToFill" id="4iR-H5-MbF">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timeline Stuff" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6KV-cg-KYR">
+                                <rect key="frame" x="238" y="84" width="124" height="24"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6KV-cg-KYR" firstAttribute="centerX" secondItem="4iR-H5-MbF" secondAttribute="centerX" id="NfV-6a-9CT"/>
+                            <constraint firstItem="6KV-cg-KYR" firstAttribute="top" secondItem="vv1-Ph-jI6" secondAttribute="bottom" constant="64" id="tTk-zr-oQs"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="pE0-pC-QX7"/>
+                    <tabBarItem key="tabBarItem" title="" image="Home" id="pE0-pC-QX7">
+                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eon-in-R8Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -103,10 +148,19 @@
                                     <action selector="buttonTapped:" destination="fLt-F3-TTq" eventType="touchUpInside" id="EP3-t9-UcD"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Incorrect username/password. Please try again." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wwb-Id-wOI">
+                                <rect key="frame" x="146" y="301" width="308" height="17"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Wwb-Id-wOI" firstAttribute="centerX" secondItem="yFt-sd-5f1" secondAttribute="centerX" id="6pt-sh-FSc"/>
+                            <constraint firstItem="Wwb-Id-wOI" firstAttribute="top" secondItem="rBx-Ca-hFA" secondAttribute="bottom" constant="24" id="7YI-Jn-bQn"/>
                             <constraint firstItem="rBx-Ca-hFA" firstAttribute="centerX" secondItem="yFt-sd-5f1" secondAttribute="centerX" id="BDM-uy-ct1"/>
                             <constraint firstItem="62i-mv-moH" firstAttribute="top" secondItem="t3k-f0-kih" secondAttribute="bottom" constant="64" id="BHa-de-jKH"/>
                             <constraint firstItem="VXR-BU-iyi" firstAttribute="centerX" secondItem="yFt-sd-5f1" secondAttribute="centerX" id="CBg-ZW-v1P"/>
@@ -118,6 +172,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="failedLabel" destination="Wwb-Id-wOI" id="50v-d8-BEt"/>
                         <outlet property="loginButton" destination="rBx-Ca-hFA" id="yXl-rl-cYw"/>
                         <outlet property="passwordTF" destination="hlD-qj-4oY" id="ngf-Dm-EAe"/>
                         <outlet property="usernameTF" destination="VXR-BU-iyi" id="bp7-w8-XW9"/>
@@ -132,7 +187,7 @@
         <scene sceneID="3bq-sT-b3j">
             <objects>
                 <tabBarController id="ACX-Xh-GqS" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="hct-qF-0zg">
+                    <tabBar key="tabBar" contentMode="scaleToFill" backgroundImage="TabBG" id="hct-qF-0zg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
@@ -149,4 +204,10 @@
             <point key="canvasLocation" x="-158" y="-481"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Camera" width="40" height="30"/>
+        <image name="Home" width="38" height="36"/>
+        <image name="People" width="42" height="42"/>
+        <image name="TabBG" width="321" height="49"/>
+    </resources>
 </document>

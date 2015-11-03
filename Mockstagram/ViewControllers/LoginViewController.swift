@@ -16,6 +16,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var usernameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var failedLabel: UILabel!
     
     @IBAction func buttonTapped(sender: UIButton) {
         let testUser = usernameTF.text!
@@ -35,15 +36,18 @@ class LoginViewController: UIViewController {
         }
         if i == 1 {
             print("Logged in successfully")
+            failedLabel.hidden = true
             performSegueWithIdentifier("LogIn", sender: self)
         } else {
             print("Login failed")
+            failedLabel.hidden = false
         }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        failedLabel.hidden = true
         establishConnection()
         
     }
