@@ -23,14 +23,19 @@ class Post {
             let imageData = UIImagePNGRepresentation(image)
             let blob = imageData!.datatypeValue
             
-            do {
-                if let db = db {
-                    let rowID = try db.run(post.insert(user <- "jonny", imageFile <- blob))
-                    print("Inserted ID: \(rowID)")
+            let qualityOfServiceClass = QOS_CLASS_BACKGROUND
+            let backgroundQueue = dispatch_get_global_queue(qualityOfServiceClass, 0)
+            
+            dispatch_async(backgroundQueue, {
+                do {
+                    if let db = db {
+                        let rowID = try db.run(post.insert(user <- "jonny", imageFile <- blob))
+                        print("Inserted ID: \(rowID)")
+                    }
+                } catch _ {
+                    print("Couldn't insert image")
                 }
-            } catch _ {
-                print("Couldn't insert image")
-            }
+            })
         }
     }
 }

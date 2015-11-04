@@ -98,19 +98,19 @@ class TimelineViewController: UIViewController {
     }
     
     func insertData() {
-//        print("Inserting data...")
-//        let sample = Table("sample")
-//        let name = Expression<String>("name")
-//        let age = Expression<Int64>("age")
-//        let id = Expression<Int64>("id")
-//        do {
-//            if let db = db {
-//                let rowID = try db.run(sample.insert(name <- "Jane Doe", age <- 27, id <- 002))
-//                print("Inserted ID: \(rowID)")
-//            }
-//        } catch _ {
-//            print("Could not insert data")
-//        }
+        //        print("Inserting data...")
+        //        let sample = Table("sample")
+        //        let name = Expression<String>("name")
+        //        let age = Expression<Int64>("age")
+        //        let id = Expression<Int64>("id")
+        //        do {
+        //            if let db = db {
+        //                let rowID = try db.run(sample.insert(name <- "Jane Doe", age <- 27, id <- 002))
+        //                print("Inserted ID: \(rowID)")
+        //            }
+        //        } catch _ {
+        //            print("Could not insert data")
+        //        }
         
         print("Inserting data...")
         let image = Table("image")
@@ -196,18 +196,28 @@ class TimelineViewController: UIViewController {
         let query = post.select(imageFile).limit(1)
         var imageBlobData : Blob?
         
+        let qualityOfServiceClass = QOS_CLASS_BACKGROUND
+        let backgroundQueue = dispatch_get_global_queue(qualityOfServiceClass, 0)
         
-        if let db = db {
-            for row in db.prepare(query) {
-                imageBlobData = row[imageFile]
+        var image : UIImage?
+        
+        dispatch_async(backgroundQueue, {
+            if let db = self.db {
+                for row in db.prepare(query) {
+                    imageBlobData = row[imageFile]
+                }
             }
-        }
+            
+            if let imageBlobData = imageBlobData {
+                let imageData = NSData(bytes: imageBlobData.bytes, length: imageBlobData.bytes.count)
+                image = UIImage(data: imageData)
+            }
+            
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                self.imageView.image = image
+            })
+        })
         
-        if let imageBlobData = imageBlobData {
-            let imageData = NSData(bytes: imageBlobData.bytes, length: imageBlobData.bytes.count)
-            let image = UIImage(data: imageData)
-            imageView.image = image
-        }
     }
     
 }
