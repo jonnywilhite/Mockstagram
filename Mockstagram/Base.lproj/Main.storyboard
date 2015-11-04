@@ -86,24 +86,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timeline Stuff" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6KV-cg-KYR">
-                                <rect key="frame" x="238" y="84" width="124" height="24"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p8O-mH-ACO">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="6KV-cg-KYR" firstAttribute="centerX" secondItem="4iR-H5-MbF" secondAttribute="centerX" id="NfV-6a-9CT"/>
-                            <constraint firstItem="6KV-cg-KYR" firstAttribute="top" secondItem="vv1-Ph-jI6" secondAttribute="bottom" constant="64" id="tTk-zr-oQs"/>
+                            <constraint firstItem="p8O-mH-ACO" firstAttribute="top" secondItem="4iR-H5-MbF" secondAttribute="top" id="4hR-Aa-Yym"/>
+                            <constraint firstAttribute="trailing" secondItem="p8O-mH-ACO" secondAttribute="trailing" id="EkT-Ii-V71"/>
+                            <constraint firstItem="v5P-b1-AIB" firstAttribute="top" secondItem="p8O-mH-ACO" secondAttribute="bottom" id="hok-u5-MzN"/>
+                            <constraint firstItem="p8O-mH-ACO" firstAttribute="leading" secondItem="4iR-H5-MbF" secondAttribute="leading" id="qFG-uY-5H4"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="Home" id="pE0-pC-QX7">
                         <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="imageView" destination="p8O-mH-ACO" id="KRX-Ej-fpe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eon-in-R8Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

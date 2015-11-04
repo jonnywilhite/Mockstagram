@@ -8,11 +8,13 @@
 
 import UIKit
 import SQLite
+import Foundation
 
 class TimelineViewController: UIViewController {
     
     var db: Connection?
     var photoTakingHelper : PhotoTakingHelper?
+    @IBOutlet weak var imageView : UIImageView!
     
     //@IBOutlet weak var imageView : UIImageView!
     
@@ -20,15 +22,13 @@ class TimelineViewController: UIViewController {
         super.viewDidLoad()
         self.tabBarController?.delegate = self
         establishConnection()
-        //logIn()
         //createTable(db)
         //insertData()
         //performQuery()
         //performComplexQuery()
         //performJoinQuery()
         //performAggregateQuery()
-        //displayImage()
-        
+        displayImage()
     }
     
     override func didReceiveMemoryWarning() {
@@ -37,8 +37,13 @@ class TimelineViewController: UIViewController {
     }
     
     func takePhoto() {
+        
         photoTakingHelper = PhotoTakingHelper(viewController: self.tabBarController!) { (image : UIImage?) in
-            print("Received callback")
+            if let image = image {
+                let newPost = Post()
+                newPost.image = image
+                newPost.uploadPost(self.db)
+            }
             
         }
     }
@@ -57,45 +62,24 @@ class TimelineViewController: UIViewController {
         }
     }
     
-    func logIn() {
-        let testUser = "jonny"
-        let testPass = "test"
-        
-        let user = Table("user")
-        let username = Expression<String>("username")
-        let password = Expression<String>("password")
-        
-        let query = user.select(username, password).filter(username == testUser && password == testPass).limit(1)
-        var i = 0
-        if let db = db {
-            for person in db.prepare(query) {
-                print("Logging in as \(person[username])")
-                i++
-            }
-        }
-        if i == 1 {
-            print("Logged in successfully")
-        } else {
-            print("Login failed")
-        }
-    }
-    
     func createTable(db: Connection?) {
         
         var itWorked = false
-        let flag = Table("flag")
-        let fromUser = Expression<String>("fromUser")
-        let toPost = Expression<Int64>("toPost")
+        let post = Table("post")
+        let user = Expression<String>("user")
+        let imageFile = Expression<SQLite.Blob>("imageFile")
+        let postID = Expression<Int64>("postID")
         
         print("Creating table...")
         do {
             if let db = db {
                 
-                //try db.run(sample.drop())
+                //try db.run(post.drop())
                 
-                try db.run(flag.create(ifNotExists: true) { t in
-                    t.column(fromUser)
-                    t.column(toPost)
+                try db.run(post.create(ifNotExists: true) { t in
+                    t.column(user)
+                    t.column(imageFile)
+                    t.column(postID, primaryKey: true)
                     
                     itWorked = true;
                     })
@@ -205,24 +189,26 @@ class TimelineViewController: UIViewController {
         }
     }
     
-//    func displayImage() {
-//        let image = Table("image")
-//        let url = Expression<String>("url")
-//        var imageURLString : String?
-//        
-//        if let db = db {
-//            for pic in db.prepare(image) {
-//                imageURLString = pic[url]
-//            }
-//        }
-//        
-//        if let imageURLString = imageURLString {
-//            let imageURL = NSURL(string: imageURLString)
-//            let imageData = NSData(contentsOfURL: imageURL!)
-//            let image = UIImage(data: imageData!)
-//            imageView.image = image!
-//        }
-//    }
+    func displayImage() {
+        let post = Table("post")
+        let imageFile = Expression<SQLite.Blob>("imageFile")
+        
+        let query = post.select(imageFile).limit(1)
+        var imageBlobData : Blob?
+        
+        
+        if let db = db {
+            for row in db.prepare(query) {
+                imageBlobData = row[imageFile]
+            }
+        }
+        
+        if let imageBlobData = imageBlobData {
+            let imageData = NSData(bytes: imageBlobData.bytes, length: imageBlobData.bytes.count)
+            let image = UIImage(data: imageData)
+            imageView.image = image
+        }
+    }
     
 }
 
@@ -237,4 +223,3 @@ extension TimelineViewController: UITabBarControllerDelegate {
         }
     }
 }
-
