@@ -12,6 +12,7 @@ import SQLite
 class TimelineViewController: UIViewController {
     
     var db: Connection?
+    var photoTakingHelper : PhotoTakingHelper?
     
     //@IBOutlet weak var imageView : UIImageView!
     
@@ -33,6 +34,13 @@ class TimelineViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func takePhoto() {
+        photoTakingHelper = PhotoTakingHelper(viewController: self.tabBarController!) { (image : UIImage?) in
+            print("Received callback")
+            
+        }
     }
     
     //MARK: SQL Stuff
@@ -222,6 +230,7 @@ extension TimelineViewController: UITabBarControllerDelegate {
     
     func tabBarController(tabBarController: UITabBarController, shouldSelectViewController viewController: UIViewController) -> Bool {
         if (viewController is PhotoViewController) {
+            takePhoto()
             return false
         } else {
             return true

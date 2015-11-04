@@ -12,6 +12,7 @@
 		B4BABFC21BE9489700CE1A1A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BABFC11BE9489700CE1A1A /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		B4BABFC41BE9699000CE1A1A /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BABFC31BE9699000CE1A1A /* PhotoViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		B4BABFC61BE969A700CE1A1A /* FriendSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BABFC51BE969A700CE1A1A /* FriendSearchViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		B4BABFC91BE96DA800CE1A1A /* PhotoTakingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BABFC81BE96DA800CE1A1A /* PhotoTakingHelper.swift */; settings = {ASSET_TAGS = (); }; };
 		B4E3B9651BE58C3A00D7D7FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E3B9641BE58C3A00D7D7FA /* AppDelegate.swift */; };
 		B4E3B96A1BE58C3A00D7D7FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4E3B9681BE58C3A00D7D7FA /* Main.storyboard */; };
 		B4E3B96C1BE58C3A00D7D7FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4E3B96B1BE58C3A00D7D7FA /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 		B4BABFC11BE9489700CE1A1A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B4BABFC31BE9699000CE1A1A /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		B4BABFC51BE969A700CE1A1A /* FriendSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendSearchViewController.swift; sourceTree = "<group>"; };
+		B4BABFC81BE96DA800CE1A1A /* PhotoTakingHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoTakingHelper.swift; sourceTree = "<group>"; };
 		B4E3B9611BE58C3A00D7D7FA /* Mockstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mockstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4E3B9641BE58C3A00D7D7FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4E3B9691BE58C3A00D7D7FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -113,6 +115,14 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		B4BABFC71BE96D5A00CE1A1A /* PhotoTaking */ = {
+			isa = PBXGroup;
+			children = (
+				B4BABFC81BE96DA800CE1A1A /* PhotoTakingHelper.swift */,
+			);
+			path = PhotoTaking;
+			sourceTree = "<group>";
+		};
 		B4E3B9581BE58C3900D7D7FA = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +148,7 @@
 		B4E3B9631BE58C3A00D7D7FA /* Mockstagram */ = {
 			isa = PBXGroup;
 			children = (
+				B4BABFC71BE96D5A00CE1A1A /* PhotoTaking */,
 				B4BABFBE1BE93F0E00CE1A1A /* ViewControllers */,
 				B4E3B9641BE58C3A00D7D7FA /* AppDelegate.swift */,
 				B4E3B9681BE58C3A00D7D7FA /* Main.storyboard */,
@@ -347,6 +358,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4BABFC91BE96DA800CE1A1A /* PhotoTakingHelper.swift in Sources */,
 				B4BABFC21BE9489700CE1A1A /* LoginViewController.swift in Sources */,
 				B4BABFC61BE969A700CE1A1A /* FriendSearchViewController.swift in Sources */,
 				B4BABFC41BE9699000CE1A1A /* PhotoViewController.swift in Sources */,
